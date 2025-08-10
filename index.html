@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Automatic Feeder</title>
 </head>
 <body>
-    <h1>Denis Cooper</h1>
+    <h1>Automatic Feeder</h1>
+    <button id="feed_button">Feed</button>
+
+    <script>
+        document.getElementById('feed_button').addEventListener('click', async () => {
+            await fetch('http://localhost:8080/api/feed', { method: 'POST' });
+			alert('Sent feed command!');
+        });
+    </script>
 </body>
 </html>
