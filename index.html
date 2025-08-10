@@ -11,7 +11,7 @@
 
     <script>
         document.getElementById('feed_button').addEventListener('click', async () => {
-            await fetch('https://feeder-server-test.onrender.com:8080/api/feed', { method: 'POST' });
+            await fetch('https://feeder-server-test.onrender.com/api/feed', { method: 'POST' });
 			alert('Sent feed command!');
         });
     </script>
